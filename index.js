@@ -10,11 +10,8 @@ inquirer
      }
   ])
   .then((answers) => {
-    console.log(answers);
     const url = answers.URL;
-    console.log("ot url");
     var img = qr.image(url);
-    console.log("ot variable img");
     img.pipe(fs.createWriteStream("qr_img.png"));
 
   })
